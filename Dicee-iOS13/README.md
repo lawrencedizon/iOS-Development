@@ -1,7 +1,6 @@
 # Dicee
 
 ## App
-![Dice1](/Dicee-iOS13/1.png)
 ![Dice2](/Dicee-iOS13/2.png)
 
 ## Dice Roll Application
