@@ -1,6 +1,6 @@
 # Dicee
 
-## App images
+## App
 
 
 ## Dice Roll Application
