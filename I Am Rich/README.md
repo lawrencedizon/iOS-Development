@@ -7,5 +7,5 @@ I completed this tutorial I learned from Angela Yu's <b>iOS 13 and Swift 5</b> c
 A completely useless application that displays a diamond.
 
 ## App
-![Diamond](/I Am Rich/I Am Rich/Assets.xcassets/diamond.imageset/diamond.png)
+![Diamond](/1.png)
 
