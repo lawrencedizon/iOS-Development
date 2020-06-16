@@ -1,6 +1,6 @@
 # Dicee
 
-Tutorial I learned from Angela Yu's <b>iOS 13 and Swift 5</b> course from Udemy.
+I completed this tutorial I learned from Angela Yu's <b>iOS 13 and Swift 5</b> course from Udemy.
 
 ## Complete Dice Roll Application
 
