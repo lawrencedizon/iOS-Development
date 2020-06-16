@@ -1,7 +1,5 @@
 # Dicee
 
-I completed this tutorial I learned from Angela Yu's <b>iOS 13 and Swift 5</b> course from Udemy.
-
 ## Complete Dice Roll Application
 
 I made a Las Vegas dice app. You can make the die roll at the press of a button or by shaking your phone.
@@ -22,6 +20,7 @@ I made a Las Vegas dice app. You can make the die roll at the press of a button 
 * Learn about randomisation and how to generate random numbers in Swift.
 
 
+I completed this tutorial I learned from Angela Yu's <b>iOS 13 and Swift 5</b> course from Udemy.
 
 >This is a companion project to The App Brewery's Complete App Development Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
 
