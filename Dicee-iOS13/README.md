@@ -2,7 +2,7 @@
 
 Tutorial I learned from Angela Yu's <b>iOS 13 and Swift 5</b> course from Udemy.
 
-## Dice Roll Application
+## Complete Dice Roll Application
 
 We’re going to make a Las Vegas dice app. You can make the die roll at the press of a button or by shaking your phone.
 
