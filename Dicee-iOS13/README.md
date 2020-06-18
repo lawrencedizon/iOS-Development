@@ -7,4 +7,4 @@ I made a Las Vegas dice app. You can make the die roll at the press of a button 
 ## App
 ![Dice2](/Dicee-iOS13/2.png)
 
-I completed this project that I learned from Angela Yu's <b>iOS 13 and Swift 5</b> course from Udemy.
+I completed this project from Angela Yu's <b>iOS 13 and Swift 5</b> course from Udemy.
