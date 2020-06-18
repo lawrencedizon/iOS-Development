@@ -2,7 +2,7 @@
 
 ## What is it?
 
-A colourful XyloPhone app. 
+A colorful XyloPhone app. 
 
 ![](https://github.com/ldizon8/iOS-Development/blob/master/Xylophone-iOS13/2.png)
 
