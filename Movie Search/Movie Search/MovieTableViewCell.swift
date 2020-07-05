@@ -1,9 +1,9 @@
 //
-//  MovieTableViewCell.swift
-//  Movie Searcher
+//MovieTableViewCell.swift
+//  Movie Search
 //
-//  Created by Afraz Siddiqui on 3/22/20.
-//  Copyright © 2020 ASN GROUP LLC. All rights reserved.
+//  Created by Lawrence Dizon on 7/4/20.
+//  Copyright © 2020 Lawrence Dizon. All rights reserved.
 //
 
 import UIKit

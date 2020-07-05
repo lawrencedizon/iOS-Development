@@ -13,6 +13,8 @@
 		90EF5A1524B14EB90002D587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90EF5A1324B14EB90002D587 /* Main.storyboard */; };
 		90EF5A1724B14EBA0002D587 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90EF5A1624B14EBA0002D587 /* Assets.xcassets */; };
 		90EF5A1A24B14EBA0002D587 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90EF5A1824B14EBA0002D587 /* LaunchScreen.storyboard */; };
+		90EF5A2324B14F500002D587 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90EF5A2124B14F500002D587 /* MovieTableViewCell.xib */; };
+		90EF5A2424B14F500002D587 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EF5A2224B14F500002D587 /* MovieTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		90EF5A1624B14EBA0002D587 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90EF5A1924B14EBA0002D587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90EF5A1B24B14EBA0002D587 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90EF5A2124B14F500002D587 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		90EF5A2224B14F500002D587 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				90EF5A1624B14EBA0002D587 /* Assets.xcassets */,
 				90EF5A1824B14EBA0002D587 /* LaunchScreen.storyboard */,
 				90EF5A1B24B14EBA0002D587 /* Info.plist */,
+				90EF5A2224B14F500002D587 /* MovieTableViewCell.swift */,
+				90EF5A2124B14F500002D587 /* MovieTableViewCell.xib */,
 			);
 			path = "Movie Search";
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			files = (
 				90EF5A1A24B14EBA0002D587 /* LaunchScreen.storyboard in Resources */,
 				90EF5A1724B14EBA0002D587 /* Assets.xcassets in Resources */,
+				90EF5A2324B14F500002D587 /* MovieTableViewCell.xib in Resources */,
 				90EF5A1524B14EB90002D587 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +147,7 @@
 			files = (
 				90EF5A1224B14EB90002D587 /* ViewController.swift in Sources */,
 				90EF5A0E24B14EB90002D587 /* AppDelegate.swift in Sources */,
+				90EF5A2424B14F500002D587 /* MovieTableViewCell.swift in Sources */,
 				90EF5A1024B14EB90002D587 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
