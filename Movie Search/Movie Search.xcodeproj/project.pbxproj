@@ -28,6 +28,7 @@
 		90EF5A1B24B14EBA0002D587 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90EF5A2124B14F500002D587 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		90EF5A2224B14F500002D587 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		90EF5A6524B213320002D587 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +70,7 @@
 				90EF5A1B24B14EBA0002D587 /* Info.plist */,
 				90EF5A2224B14F500002D587 /* MovieTableViewCell.swift */,
 				90EF5A2124B14F500002D587 /* MovieTableViewCell.xib */,
+				90EF5A6524B213320002D587 /* README.md */,
 			);
 			path = "Movie Search";
 			sourceTree = "<group>";
