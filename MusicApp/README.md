@@ -1,10 +1,8 @@
-# Egg Timer
+# Music Player App
 
-## What is it?
-A complete beautiful egg timer app to boil your eggs to perfection depending on how you prefer your eggs. 
+![photo](https://github.com/ldizon8/iOS-Development/blob/master/MusicApp/1.png)
+![photo2](https://github.com/ldizon8/iOS-Development/blob/master/MusicApp/1.png)
 
-![Egg Photo](https://github.com/ldizon8/iOS-Development/blob/master/EggTimer-iOS13/egg.png)
 
-I completed this project from Angela Yu's iOS 13 and Swift 5 course from Udemy.
 
 
