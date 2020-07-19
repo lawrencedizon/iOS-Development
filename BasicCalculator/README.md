@@ -1,10 +1,8 @@
-# Dicee
+# Basic Calculator
 
-## Complete Dice Roll Application
-
-I made a Las Vegas dice app. You can make the die roll at the press of a button or by shaking your phone.
+A simple calculator that can do only one operation.
 
 ## App
-![Dice2](/Dicee-iOS13/2.png)
+![Calculator](https://github.com/ldizon8/iOS-Development/blob/master/BasicCalculator/1.png)
 
-I completed this project from Angela Yu's <b>iOS 13 and Swift 5</b> course from Udemy.
+
