@@ -9,6 +9,17 @@ class DetailViewController: UIViewController {
     @IBOutlet var authorLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     
+    @IBAction func updateImage(){
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType =
+            UIImagePickerController.isSourceTypeAvailable(.camera)
+            ?   .camera
+            : .photoLibrary
+        imagePicker.allowsEditing = true
+        present(imagePicker, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = book.image

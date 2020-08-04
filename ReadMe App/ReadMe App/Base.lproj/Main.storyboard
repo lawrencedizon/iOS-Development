@@ -79,7 +79,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TSa-eH-BNE">
-                                        <rect key="frame" x="0.0" y="74.5" width="207" height="19"/>
+                                        <rect key="frame" x="0.0" y="72" width="207" height="24"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
