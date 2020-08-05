@@ -20,6 +20,7 @@ class LibraryViewController: UITableViewController {
         }
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

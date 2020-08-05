@@ -1,5 +1,4 @@
 
-
 import UIKit
 
 class DetailViewController: UIViewController {
@@ -14,10 +13,10 @@ class DetailViewController: UIViewController {
         imagePicker.delegate = self
         imagePicker.sourceType =
             UIImagePickerController.isSourceTypeAvailable(.camera)
-            ?   .camera
+            ? .camera
             : .photoLibrary
         imagePicker.allowsEditing = true
-        present(imagePicker, animated: true)
+        present(imagePicker,animated: true)
     }
     
     override func viewDidLoad() {
@@ -34,5 +33,16 @@ class DetailViewController: UIViewController {
     init?(coder: NSCoder, book: Book) {
         self.book = book
         super.init(coder: coder)
+    }
+}
+
+extension DetailViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let selectedImage = info[.editedImage] as? UIImage else {
+            return
+        }
+        imageView.image = selectedImage
+        Library.saveImage(selectedImage, forBook: book)
+        dismiss(animated: true)
     }
 }
