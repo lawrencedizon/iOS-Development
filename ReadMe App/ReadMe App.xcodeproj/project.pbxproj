@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		907AA5DB24DAE85700EE883D /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907AA5DA24DAE85700EE883D /* BookCell.swift */; };
 		90E16E9224D52B4D00B693F8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E16E9124D52B4D00B693F8 /* DetailViewController.swift */; };
 		90F1BBBB24D495E6006EA185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F1BBBA24D495E6006EA185 /* AppDelegate.swift */; };
 		90F1BBBD24D495E6006EA185 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F1BBBC24D495E6006EA185 /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		907AA5DA24DAE85700EE883D /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		90E16E9124D52B4D00B693F8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		90F1BBB724D495E6006EA185 /* ReadMe App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReadMe App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F1BBBA24D495E6006EA185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				90F1BBBA24D495E6006EA185 /* AppDelegate.swift */,
 				90F1BBBC24D495E6006EA185 /* SceneDelegate.swift */,
 				90F1BBBE24D495E6006EA185 /* LibraryViewController.swift */,
+				907AA5DA24DAE85700EE883D /* BookCell.swift */,
 				90F1BBC024D495E6006EA185 /* Main.storyboard */,
 				90E16E9124D52B4D00B693F8 /* DetailViewController.swift */,
 				90F1BBC324D495E8006EA185 /* Assets.xcassets */,
@@ -150,6 +153,7 @@
 				90F1BBCF24D49CA1006EA185 /* Book.swift in Sources */,
 				90F1BBBF24D495E6006EA185 /* LibraryViewController.swift in Sources */,
 				90F1BBD124D524BB006EA185 /* Library.swift in Sources */,
+				907AA5DB24DAE85700EE883D /* BookCell.swift in Sources */,
 				90E16E9224D52B4D00B693F8 /* DetailViewController.swift in Sources */,
 				90F1BBBB24D495E6006EA185 /* AppDelegate.swift in Sources */,
 				90F1BBBD24D495E6006EA185 /* SceneDelegate.swift in Sources */,
