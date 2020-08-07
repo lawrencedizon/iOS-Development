@@ -60,10 +60,32 @@ class ViewController: UIViewController {
             delay: 0,
             options: .curveEaseOut,
             animations: {recognizerView.center = finalPoint})
-
-        
-        
+ 
     }
+    
+    @IBAction func handlePinch(_ recognizer: UIPinchGestureRecognizer) {
+        guard let recognizerView = recognizer.view else {
+          return
+        }
+        
+        recognizerView.transform = recognizerView.transform.scaledBy(x: recognizer.scale, y: recognizer.scale)
+        recognizer.scale = 1
+      }
+      
+      @IBAction func handleRotate(_ recognizer: UIRotationGestureRecognizer) {
+        guard let recognizerView = recognizer.view else {
+          return
+        }
+        
+        recognizerView.transform = recognizerView.transform.rotated(by: recognizer.rotation)
+        recognizer.rotation = 0
+      }
+    }
+
+    extension ViewController: UIGestureRecognizerDelegate {
+      func gestureRecognizer(_: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith _: UIGestureRecognizer) -> Bool {
+        return true
+      }
     
     
 

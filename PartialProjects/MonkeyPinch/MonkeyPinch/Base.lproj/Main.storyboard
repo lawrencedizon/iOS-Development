@@ -20,17 +20,22 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="banana" translatesAutoresizingMaskIntoConstraints="NO" id="l9n-ID-7da">
-                                <rect key="frame" x="20" y="252" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                            </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="monkey" translatesAutoresizingMaskIntoConstraints="NO" id="AAH-z6-LYK">
                                 <rect key="frame" x="31" y="44" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="gOL-DW-qua" appends="YES" id="TqZ-8w-hR0"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="banana" translatesAutoresizingMaskIntoConstraints="NO" id="l9n-ID-7da">
+                                <rect key="frame" x="9" y="270" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4im-rX-g9J" appends="YES" id="ewb-Wq-mbb"/>
+                                    <outletCollection property="gestureRecognizers" destination="n6R-w5-HKQ" appends="YES" id="wTt-Zz-LjN"/>
+                                    <outletCollection property="gestureRecognizers" destination="5ia-Fl-XGl" appends="YES" id="MzN-GF-jxO"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -45,11 +50,30 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="gOL-DW-qua">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="gOL-DW-qua" userLabel="Monkey Pan Gesture Recognizer">
                     <connections>
                         <action selector="handlePan:" destination="BYZ-38-t0r" id="qlT-3B-Hl2"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="yTr-Yu-8gL"/>
                     </connections>
                 </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="4im-rX-g9J" userLabel="Banana Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="xcE-4D-0d3"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="kXM-GN-3m3"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="n6R-w5-HKQ" userLabel="Banana Pinch Gesture Recognizer">
+                    <connections>
+                        <action selector="handlePinch:" destination="BYZ-38-t0r" id="ZTZ-Kt-Lcq"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="6Zb-dK-zEw"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="5ia-Fl-XGl" userLabel="Banana Rotation Gesture Recognizer">
+                    <connections>
+                        <action selector="handleRotate:" destination="BYZ-38-t0r" id="oLG-up-2pv"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="5M2-jV-tHg"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="132" y="139"/>
         </scene>
