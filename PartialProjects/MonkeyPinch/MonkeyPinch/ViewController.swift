@@ -27,8 +27,42 @@
 /// THE SOFTWARE.
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    let chompPlayer = AVAudioPlayer(fileName: "chomp")
+    let laughPlayer = AVAudioPlayer(fileName: "hehehe")
+    
+    @IBOutlet var interactiveSubviews: [UIImageView]! {
+        didSet {
+            for subview in interactiveSubviews {
+                let tapRecognizer = UITapGestureRecognizer(
+                    target: self, action: #selector(handleTap))
+                
+                
+                tapRecognizer.delegate = self
+                subview.addGestureRecognizer(tapRecognizer)
+            }
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        interactiveSubviews.map {
+            $0.gestureRecognizers!.first { $0 is UIPanGestureRecognizer }!
+        }
+        .forEach { panRecognizer in
+            panRecognizer.view!.gestureRecognizers!
+                .first { $0 is UITapGestureRecognizer}!
+            .require(toFail: panRecognizer)
+        }
+    }
+    
+    
+    
+    
+    
     @IBAction func handlePan(_ recognizer: UIPanGestureRecognizer){
         guard let recognizerView = recognizer.view else {
             return
@@ -80,14 +114,31 @@ class ViewController: UIViewController {
         recognizerView.transform = recognizerView.transform.rotated(by: recognizer.rotation)
         recognizer.rotation = 0
       }
+    
+    @objc func handleTap(_: UITapGestureRecognizer){
+        chompPlayer.play()
     }
+}
+    
 
     extension ViewController: UIGestureRecognizerDelegate {
       func gestureRecognizer(_: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith _: UIGestureRecognizer) -> Bool {
         return true
       }
-    
-    
+        
+    }
 
+
+    extension AVAudioPlayer {
+        convenience init(fileName: String){
+            let url = Bundle.main.url(forResource: fileName, withExtension: "caf")!
+            try! self.init(contentsOf: url)
+            prepareToPlay()
+    }
 }
+
+
+
+
+
 

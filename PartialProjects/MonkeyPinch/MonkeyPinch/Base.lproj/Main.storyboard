@@ -48,6 +48,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YMY-eo-WL0"/>
                     </view>
+                    <connections>
+                        <outletCollection property="interactiveSubviews" destination="AAH-z6-LYK" collectionClass="NSMutableArray" id="Fmv-0Q-JOW"/>
+                        <outletCollection property="interactiveSubviews" destination="l9n-ID-7da" collectionClass="NSMutableArray" id="iyp-Cg-sDw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="gOL-DW-qua" userLabel="Monkey Pan Gesture Recognizer">
