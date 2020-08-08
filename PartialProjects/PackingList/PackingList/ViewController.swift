@@ -41,6 +41,9 @@ final class ViewController: UIViewController {
 
   @IBOutlet private var menuButton: UIButton!
   @IBOutlet private var titleLabel: UILabel!
+    
+    @IBOutlet private var menuHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private var menuButtonConstraint: NSLayoutConstraint!
 
   //MARK:- Variables
   
@@ -65,6 +68,19 @@ extension ViewController {
 private extension ViewController {
   @IBAction func toggleMenu() {
     menuIsOpen.toggle()
+    titleLabel.text = menuIsOpen ? "Select Item!" : "Packing List"
+    view.layoutIfNeeded()
+    menuHeightConstraint.constant = menuIsOpen ? 200 : 80
+    menuButtonConstraint.constant = menuIsOpen ? 16 : 8
+    
+    UIView.animate(withDuration: 1 / 3, delay: 0, options: .curveEaseIn, animations:
+        {   self.menuButton.transform = .init(rotationAngle: self.menuIsOpen ? .pi / 4 : 0)
+            self.view.layoutIfNeeded()
+            
+    })
+    
+    
+    
   }
 
   func showItem(_ item: Item) {
