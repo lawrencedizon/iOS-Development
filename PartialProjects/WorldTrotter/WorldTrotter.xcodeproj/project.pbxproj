@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		9001133E24E070FD009A7FDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001133D24E070FD009A7FDD /* AppDelegate.swift */; };
 		9001134024E070FD009A7FDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001133F24E070FD009A7FDD /* SceneDelegate.swift */; };
-		9001134224E070FD009A7FDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001134124E070FD009A7FDD /* ViewController.swift */; };
+		9001134224E070FD009A7FDD /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001134124E070FD009A7FDD /* ConversionViewController.swift */; };
 		9001134524E070FD009A7FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9001134324E070FD009A7FDD /* Main.storyboard */; };
 		9001134724E070FE009A7FDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9001134624E070FE009A7FDD /* Assets.xcassets */; };
 		9001134A24E070FE009A7FDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9001134824E070FE009A7FDD /* LaunchScreen.storyboard */; };
+		903A51F324E19B3D004C1C60 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A51F224E19B3D004C1C60 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9001133A24E070FD009A7FDD /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9001133D24E070FD009A7FDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9001133F24E070FD009A7FDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9001134124E070FD009A7FDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9001134124E070FD009A7FDD /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 		9001134424E070FD009A7FDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9001134624E070FE009A7FDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9001134924E070FE009A7FDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9001134B24E070FE009A7FDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		903A51F224E19B3D004C1C60 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				9001133D24E070FD009A7FDD /* AppDelegate.swift */,
 				9001133F24E070FD009A7FDD /* SceneDelegate.swift */,
-				9001134124E070FD009A7FDD /* ViewController.swift */,
+				9001134124E070FD009A7FDD /* ConversionViewController.swift */,
+				903A51F224E19B3D004C1C60 /* MapViewController.swift */,
 				9001134324E070FD009A7FDD /* Main.storyboard */,
 				9001134624E070FE009A7FDD /* Assets.xcassets */,
 				9001134824E070FE009A7FDD /* LaunchScreen.storyboard */,
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9001134224E070FD009A7FDD /* ViewController.swift in Sources */,
+				9001134224E070FD009A7FDD /* ConversionViewController.swift in Sources */,
 				9001133E24E070FD009A7FDD /* AppDelegate.swift in Sources */,
 				9001134024E070FD009A7FDD /* SceneDelegate.swift in Sources */,
+				903A51F324E19B3D004C1C60 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
