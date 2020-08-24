@@ -1,25 +1,18 @@
 //
 //  AppDelegate.swift
-//  Breakdance App
+//  QuickstartApp
 //
-//  Created by Lawrence Dizon on 8/11/20.
-//  Copyright © 2020 Lawrence Dizon. All rights reserved.
+//  Created by Lawrence Dizon on 8/18/20.
+//  Copyright © 2020 com.example. All rights reserved.
 //
 
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
-//    // MARK:- State Preservation
-//    func application(_ application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
-//        return true
-//    }
-//    
-//    func application(_ application: UIApplication, shouldRestoreSecureApplicationState coder: NSCoder) -> Bool {
-//        return true
-//    }
-    
+
+
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
