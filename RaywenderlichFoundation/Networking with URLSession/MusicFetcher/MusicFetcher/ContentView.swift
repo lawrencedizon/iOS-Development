@@ -48,28 +48,31 @@ struct ContentView: View {
     }
   }
   
-  func fetchMusic() {
-    guard let url =  URL(string:"https://itunes.apple.com/search?media=music&entity=song&term=cohen") else {
-      return
+      func fetchMusic() {
+        guard let url =  URL(string:"https://itunes.apple.com/search?media=music&entity=song&term=bring%20me%20the%20horizon") else {
+          return
+        }
+        
+        //URLSession Goes Here
+        URLSession.shared.dataTask(with: url) {data, response, taskError in
+            guard let httpResponse = response as? HTTPURLResponse, (200..<300).contains(httpResponse.statusCode),
+            let data = data else {
+                fatalError()
+            }
+            
+            //Add JSON Decoding in URLSession closure
+            let decoder = JSONDecoder()
+            guard let response = try? decoder.decode(MediaResponse.self, from: data) else {
+                return
+            }
+          
+            //Update music items on main thread
+            DispatchQueue.main.async {
+                self.musicItems = response.results
+            }
+        }.resume() //Very important to resume the task
     }
-    
-//    URLSession Goes Here
-    
-//    Add JSON Decoding in URLSession closure
-      
-//    let decoder = JSONDecoder()
-//    guard let response = try? decoder.decode(MediaResponse.self, from: data) else {
-//      return
-//    }
-      
-//    Update music items on main thread
-//    DispatchQueue.main.async {
-//      self.musicItems = response.results
-//    }
-    
-  }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
