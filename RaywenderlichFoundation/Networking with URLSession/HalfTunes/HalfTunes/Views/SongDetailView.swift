@@ -37,14 +37,13 @@ struct SongDetailView: View {
   @Binding var musicItem: MusicItem
   @State private var playMusic = false
   @ObservedObject var download = SongDownload()
-    
-  var musicImage: UIImage? = nil
+  @State private var musicImage = UIImage(named: "c_urlsession_card_artwork")!
   
   var body: some View {
     VStack {
       GeometryReader { reader in
         VStack {
-          Image("c_urlsession_card_artwork")
+          Image(uiImage: self.musicImage)
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(height: reader.size.height / 2)
@@ -53,27 +52,48 @@ struct SongDetailView: View {
             .shadow(radius: 10)
           Text("\(self.musicItem.trackName) - \(self.musicItem.artistName)")
           Text(self.musicItem.collectionName)
-            Button(action: {self.downloadButtonTapped()}) {
-                Text(self.download.downloadLocation == nil ? "Download" : "Listen")
-            Text("Download")
+          Button(action: self.downloadButtonTapped) {
+            Text(self.download.downloadLocation == nil ? "Download" : "Listen")
+          }.sheet(isPresented: self.$playMusic) {
+            return AudioPlayer(songUrl: self.download.downloadLocation!)
           }
         }
       }
-    }.sheet(isPresented: self.$playMusic){
-        return AudioPlayer(songUrl: self.download.downloadLocation!)
+    }.onAppear(perform: displayAlbumArt)
+  }
+  
+  func displayAlbumArt() {
+    guard let albumImageUrl = URL(string: musicItem.artwork) else {
+      return
+    }
+    let task = URLSession.shared.downloadTask(with: albumImageUrl) { location, response, error in
+      
+      guard let location = location,
+            let imageData = try? Data(contentsOf: location),
+        let image = UIImage(data: imageData) else {
+          return
+      }
+      //DispatchQueue.main.async {
+        self.musicImage = image
+     // }
+    }
+    task.resume()
+    
+    
+  }
+  
+  func downloadButtonTapped() {
+    if self.download.downloadLocation == nil {
+      guard let previewUrl = self.musicItem.previewUrl else {
+        return
+      }
+      self.download.fetchSongAtUrl(previewUrl)
+    } else {
+      self.playMusic = true
     }
   }
-    func downloadButtonTapped(){
-        if self.download.downloadLocation == nil {
-            guard let previewUrl = self.musicItem.previewUrl else {
-                return
-            }
-            self.download.fetchSongAtUrl(previewUrl)
-        }else {
-            self.playMusic = true
-        }
-        
-    }
+  
+  
 }
 
 
