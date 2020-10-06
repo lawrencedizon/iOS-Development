@@ -36,7 +36,8 @@ struct SongDetailView: View {
 
   @Binding var musicItem: MusicItem
   @State private var playMusic = false
-  
+  @ObservedObject var download = SongDownload()
+    
   var musicImage: UIImage? = nil
   
   var body: some View {
@@ -52,13 +53,27 @@ struct SongDetailView: View {
             .shadow(radius: 10)
           Text("\(self.musicItem.trackName) - \(self.musicItem.artistName)")
           Text(self.musicItem.collectionName)
-          Button(action: {}) {
+            Button(action: {self.downloadButtonTapped()}) {
+                Text(self.download.downloadLocation == nil ? "Download" : "Listen")
             Text("Download")
           }
         }
       }
+    }.sheet(isPresented: self.$playMusic){
+        return AudioPlayer(songUrl: self.download.downloadLocation!)
     }
-  }  
+  }
+    func downloadButtonTapped(){
+        if self.download.downloadLocation == nil {
+            guard let previewUrl = self.musicItem.previewUrl else {
+                return
+            }
+            self.download.fetchSongAtUrl(previewUrl)
+        }else {
+            self.playMusic = true
+        }
+        
+    }
 }
 
 
