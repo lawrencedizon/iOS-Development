@@ -52,7 +52,10 @@ struct SongDetailView: View {
             .shadow(radius: 10)
           Text("\(self.musicItem.trackName) - \(self.musicItem.artistName)")
           Text(self.musicItem.collectionName)
-          Button(action: self.downloadButtonTapped) {
+            if (self.download.isDownloading){
+                Text("\(Int(self.download.downloadedAmount * 100))% downloaded").padding(.top)
+            }
+            Button(action: self.downloadButtonTapped) {
             Text(self.download.downloadLocation == nil ? "Download" : "Listen")
           }.sheet(isPresented: self.$playMusic) {
             return AudioPlayer(songUrl: self.download.downloadLocation!)
