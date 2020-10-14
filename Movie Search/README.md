@@ -2,7 +2,7 @@
 A movie search app that will look up a movie in a database and it directs you to its IMDB link.
 
 ## Development
-**URLSession-** to make API calls to the OMDB to retrieve JSON movie information for decoding.\
+**URLSession-** to make API calls to the OMDB API to retrieve JSON movie information for decoding.\
 **SFSafariViewController-** to allow the user to navigate the IMDB film content.
 
 ## App Preview
