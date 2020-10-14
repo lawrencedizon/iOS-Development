@@ -1,4 +1,4 @@
-# I Am Rich
+# I Am Rich (my First iOS App)
 
 ## Complete I Am Rich Application
 
