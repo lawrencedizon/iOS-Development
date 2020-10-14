@@ -2,7 +2,7 @@
 A simple Music Player application that plays MP3 files with operational pausing, previous track, and next track buttons. The album image will shrink and expand when paused/resumed.
 
 # Development
-**UIKit-** includes generic UIKit components: (Buttons, Sliders, and ImageViews) for use audio control interaction.\
+**UIKit-** includes generic UIKit components: (Buttons, Sliders, and ImageViews) for user audio control interaction.\
 **AVFoundation-** utilizes the AVAudioPlayer to play the mp3 audio files.
 
 # App Preview
