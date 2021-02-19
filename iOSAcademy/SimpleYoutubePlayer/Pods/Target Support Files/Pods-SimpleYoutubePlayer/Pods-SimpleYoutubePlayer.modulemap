@@ -1,0 +1,6 @@
+framework module Pods_SimpleYoutubePlayer {
+  umbrella header "Pods-SimpleYoutubePlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}
