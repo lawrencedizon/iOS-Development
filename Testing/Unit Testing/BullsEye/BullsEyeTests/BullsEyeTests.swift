@@ -26,28 +26,60 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
+@testable import BullsEye //Gives unit test access to internal types and functions in BullsEye
 import XCTest
 
 class BullsEyeTests: XCTestCase {
+  
+  var sut: BullsEyeGame! //Placeholder for BullsEyeGame, (System Under Test), or the object the test case is concerned with testing
 
-    override func setUpWithError() throws {
+    override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+      super.setUp()
+      sut = BullsEyeGame()
+      sut.startNewGame()
     }
 
-    override func tearDownWithError() throws {
+    override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+      sut = nil
+      super.tearDown()
     }
+  
+  func testScoreIsComputed(){
+    // 1. given
+    let guess = sut.targetValue + 5
+    
+    // 2. when
+    sut.check(guess: guess)
+    
+    // 3. then
+    XCTAssertEqual(sut.scoreRound, 95, "Score computed from guess is wrong")
+  }
+  
+  func testScoreisComputedWhenGuessLTTarget(){
+    // 1. given - you set up any values needed
+    let guess = sut.targetValue + 5
+    
+    // 2. when - execute code to be tested
+    sut.check(guess: guess)
+    
+    // 3. then - assert the result you expect w/ a message to print if the test fails
+    XCTAssertEqual(sut.scoreRound, 95, "Score completed from guess is wrong")
+    
+  }
+  
+  func testScoreIsComputedWhenGuessLTTarget() {
+    // 1. given -
+    let guess = sut.targetValue - 5
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+    // 2. when
+    sut.check(guess: guess)
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+    // 3. then
+    XCTAssertEqual(sut.scoreRound, 95, "Score computed from guess is wrong")
+  }
+
+ 
 
 }
